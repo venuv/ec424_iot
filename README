@@ -1,0 +1,23 @@
+need npm installs of https://www.npmjs.com/package/dynamodb and streaming-s3 - https://github.com/mindblaze/streaming-s3 and express
+
+run node server - node app.js
+
+REST Call or browser access with video file URL to publish file and associated metadata to S3/DynamoDB - 
+http://localhost:3000/publish?vidurl=videoviewdemo.mp4
+
+populate the following metadata in utils/config.js
+ -  DYNAMODB_ACCESSKEYID
+ -  DYNAMODB_SECRETACCESSKEY
+ -  DYNAMODB_TEST_TABLE1 - dynamoDB table name
+ -  CAMERA_NAME - name of room (camera) from which video taken
+
+video uploaded to ec424 bucket in S3
+
+metadata
+- publishes an entry to a test table in dynamodb with sha as the hash key.
+- config.js sets up the environment variables
+
+
+
+
+
