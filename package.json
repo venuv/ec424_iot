@@ -1,0 +1,19 @@
+{
+  "name": "ec424_iot",
+  "version": "1.0.0",
+  "description": "iot extension to ec424",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "iot"
+  ],
+  "author": "venu vasudevan",
+  "license": "ISC",
+  "dependencies": {
+    "dynamodb": "^0.3.6",
+    "express": "^4.13.4",
+    "streaming-s3": "^0.4.1"
+  }
+}
