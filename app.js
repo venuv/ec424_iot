@@ -33,8 +33,8 @@ app.get('/publish', function (req, res) {
 	//	var fStream = fs.createReadStream(__dirname + '/videoviewdemo.mp4');
 	var fStream = fs.createReadStream(__dirname + '/'+req.query.vidurl);
 	var s3key = randomName+'.mp4';
-	var uploader = new streamingS3(fStream, {accessKeyId: 'AKIAI4OGNRY4NBZPP6TA', 
-						 secretAccessKey: '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'},
+	var uploader = new streamingS3(fStream, {accessKeyId: cfg['DYNAMODB_ACCESSKEYID'], 
+						 secretAccessKey: cfg['DYNAMODB_SECRETACCESSKEY']},
 	    {
 		Bucket: 'ec424',
 		Key: s3key,
